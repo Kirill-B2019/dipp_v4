@@ -2,7 +2,7 @@
     <div class="container">
         <div class="main-header">
             <div class="header-left">
-                <div class="header-logo"><a class="d-flex" href="/l"><img alt="PF" src="{{asset('MainPublic/assets/imgs/template/logo.svg')}}"></a></div>
+                <div class="header-logo"><a class="d-flex" href="/"><img alt="PF" src="{{asset('MainPublic/assets/imgs/template/logo.svg')}}"></a></div>
                 <div class="header-nav">
                     <nav class="nav-main-menu d-none d-xl-block">
                         <ul class="main-menu">
@@ -71,15 +71,27 @@
                                     <li><a href="#">{{__('Предложения')}}</a></li>
                                 </ul>
                             </li>
-                            <li class="has-children"><a href="#">{{__('Исламский аккаунт')}}</a></li>
+                            <li class="has-children"><a href="#">{{__('Страхование')}}</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">{{__('Гарантии платформы')}}</a></li>
+                                    <li><a href="#">{{__('Страховой токен iPFT')}}</a></li>
+                                </ul>
+                            </li>
+                            </li>
                             <li class="has-children"><a href="#">{{__('Маркетплейс')}}</a></li>
+                            <li class="has-children"><a href="#">{{__('База знаний')}}</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">{{__('Термины')}}</a></li>
+                                    <li><a href="#">{{__('Документы')}}</a></li>
+                                    <li><a href="#">{{__('Обучение')}}</a></li>
+                                </ul>
+                            </li>
                             <li class="has-children"><a href="#">{{__('Сервисы')}}</a>
                                 <ul class="sub-menu">
                                     <li><a href="#">{{__('API')}}</a></li>
                                     <li><a href="#">{{__('PFMobile')}}</a></li>
                                 </ul>
                             </li>
-                            <li class="has-children"><a href="#">{{__('База знаний')}}</a></li>
 
                         </ul>
                     </nav>
