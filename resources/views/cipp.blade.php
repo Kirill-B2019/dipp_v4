@@ -18,12 +18,7 @@
                                 <path d="M22 11.0003L18.4791 7.47949V10.3074H0V11.6933H18.4791V14.5213L22 11.0003Z" fill=""></path>
                             </svg></a>
                         <h1 class="display-2 mb-30 mt-25 neutral-0">{{__('Цифровая Инвестиционная Проектная Платформа')}}</h1>
-                        <p class="text-lg neutral-500 mb-55">{{__('реализация проектов и обеспечение дохода инвестиций,
-                                                                   защита инвестиций,
-                                                                   страхование рисков,
-                                                                   AI экспертиза проектов,
-                                                                   собственная и проектные эмиссии, ЦФА и УЦП,
-                                                                   блокчейн "ГАНИМЕД"')}}</p>
+                        <p class="text-lg neutral-500 mb-55">{{__('цифровая инфраструктура новой экономики, где сливаются технологии, капитал и регуляторика')}}</p>
                         <div class="d-flex mb-60">
                             <a class="hover-up mr-5" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/googleplay.png')}}" alt="PF"></a>
                             <a class="hover-up" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/appstore.png')}}" alt="PF"></a></div>
@@ -40,6 +35,7 @@
             </div>
         </div>
     </section>
+    <!-- Как это рабтает-->
     <section class="section-box box-pricing-2 box-pricing-3">
         <div class="container"><a class="btn btn-brand-4-sm" href="#">{{__('Как это работает')}}</a>
             <h2 class="mt-15 mb-20">{{__('Всего 3 простых и быстрых шага')}}<br class="d-none d-lg-block">{{__(' для размещения проекта или запуска инвестиций в работу!')}}</h2>
@@ -87,349 +83,182 @@
             </div>
         </div>
         <div class="container">
-
             <div class="block-pricing">
                 <div class="row">
+                    <div class="col-lg-4 d-none d-lg-block">
+                            <img src="{{asset('MainPublic/assets/imgs/page/features/img-feature4.png')}}" alt="PF">
+                        </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="card-pricing card-pricing-style-2 card-pricing-style-3">
-                            <div class="card-title">
-                                <h6>Basic</h6>
-                            </div>
-                            <div class="card-price">
-                                <div class="for-month">
-                                    <h1 class="heading-1">$99</h1><span class="text-20-medium color-grey">per monthly</span>
-                                </div>
-                                <div class="for-year">
-                                    <h1 class="heading-1">$1,188</h1><span class="text-20-medium color-grey">yearly</span>
-                                </div>
-                            </div>
-                            <div class="card-button"><a class="btn btn-get-started" href="#">Get started
-                                    <svg width="23" height="8" viewbox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.5 3.99934L18.9791 0.478516V3.30642H0.5V4.69236H18.9791V7.52031L22.5 3.99934Z" fill=""></path>
-                                    </svg></a></div>
-                            <div class="card-lists"><strong class="text-18-bold">What&rsquo;s included</strong>
-                                <ul class="list-feature">
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            5,000 Monthly Word Limit
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            50+ Languages
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            Advance Editor Tool
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            50 Accounts
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-pricing card-pricing-style-2 card-pricing-style-3">
-                            <div class="card-title">
-                                <h6>Enterprise</h6>
-                            </div>
-                            <div class="card-price">
-                                <div class="for-month">
-                                    <h1 class="heading-1">$399</h1><span class="text-20-medium color-grey">per monthly</span>
-                                </div>
-                                <div class="for-year">
-                                    <h1 class="heading-1">$4,788</h1><span class="text-20-medium color-grey">per yearly</span>
-                                </div>
-                            </div>
-                            <div class="card-button"><a class="btn btn-get-started" href="#">Get started
-                                    <svg width="23" height="8" viewbox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.5 3.99934L18.9791 0.478516V3.30642H0.5V4.69236H18.9791V7.52031L22.5 3.99934Z" fill=""></path>
-                                    </svg></a></div>
-                            <div class="card-lists"><strong class="text-18-bold">What&rsquo;s included</strong>
-                                <ul class="list-feature">
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            5,000 Monthly Word Limit
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            50+ Languages
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            Advance Editor Tool
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            50 Accounts
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-pricing card-pricing-style-2 card-pricing-style-3">
-                            <div class="card-title">
-                                <h6>Basic</h6>
-                            </div>
-                            <div class="card-price">
-                                <div class="for-month">
-                                    <h1 class="heading-1">$99</h1><span class="text-20-medium color-grey">per monthly</span>
-                                </div>
-                                <div class="for-year">
-                                    <h1 class="heading-1">$1,188</h1><span class="text-20-medium color-grey">yearly</span>
-                                </div>
-                            </div>
-                            <div class="card-button"><a class="btn btn-get-started" href="#">Get started
-                                    <svg width="23" height="8" viewbox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.5 3.99934L18.9791 0.478516V3.30642H0.5V4.69236H18.9791V7.52031L22.5 3.99934Z" fill=""></path>
-                                    </svg></a></div>
-                            <div class="card-lists"><strong class="text-18-bold">What&rsquo;s included</strong>
-                                <ul class="list-feature">
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            5,000 Monthly Word Limit
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            50+ Languages
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            Advance Editor Tool
-                                    </li>
-                                    <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
-                                            <g clip-path="url(#clip0_51_57)">
-                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
-                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                                <clippath id="clip0_51_57">
-                                                    <rect width="26" height="26" fill="white"></rect>
-                                                </clippath>
-                                            </defs>
-                                        </svg>                                            50 Accounts
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-box wow animate__animated animate__fadeIn box-logos">
-        <div class="container">
-            <div class="carouselTickerLogos2 carouselTicker_vertical" id="slide-logos">
-                <ul class="carouselTicker__list list-logos">
 
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ПРОЕКТЫ')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ЦФА')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ТОКЕНЫ')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ЭЦП')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('МЕГАПРОЕКТЫ')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('АУДИТ')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('СЕРТИФИКАТЫ')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ГЧП')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('СТРАХОВАНИЕ')}} </span>
-                    </li>
-                    <li class="carouselTicker__item">
-                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ICO')}} </span>
-                    </li>
-                </ul>
+                            <div class="card-button"><a class="btn btn-get-started" href="#">{{__('У меня есть проект')}}
+                                    <svg width="23" height="8" viewbox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.5 3.99934L18.9791 0.478516V3.30642H0.5V4.69236H18.9791V7.52031L22.5 3.99934Z" fill=""></path>
+                                    </svg></a></div>
+                            <div class="card-lists"><strong class="text-18-bold">{{__('Полный набор инвестиционного проектного сопровождения')}}</strong>
+                                <ul class="list-feature">
+                                    <li class="text-muted neutral-500">
+                                        {{__('Быстрый доступ к финансированию (в 5-10 раз быстрее традиционных способов)')}}
+                                        <br>
+                                        {{__('Готовая инфраструктура для реализации (BIM, маркетплейс, логистика)')}}
+                                        <br>
+                                        {{__('Юридическое и налоговое сопровождение.')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Подбор по проектным справочникам')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Автоматическая оценка и инвестиционный рейтинг')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Автоматический выпуск контракта и токенизация')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Создание проектного "офиса"')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('AI экспертизы')}}
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" >
+                        <div class="card-pricing card-pricing-style-2 card-pricing-style-3">
+                            <div class="card-button"><a class="btn btn-get-started" href="#">{{__('Я инвестор')}}
+                                    <svg width="23" height="8" viewbox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.5 3.99934L18.9791 0.478516V3.30642H0.5V4.69236H18.9791V7.52031L22.5 3.99934Z" fill=""></path>
+                                    </svg></a></div>
+                            <div class="card-lists"><strong class="text-18-bold">{{__('Обеспечение инвестиций, прозрачность и безопасность')}}</strong>
+                                <ul class="list-feature">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Доступ к диверсифицированным высокодоходным активам (ГЧП, стартапы, инфраструктура).')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Механизмы снижения рисков (страхование, обеспечение токенами iPFT).')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Страхование инвестиционых рисков')}}
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26" fill="none">
+                                            <g clip-path="url(#clip0_51_57)">
+                                                <path d="M13 26C20.1799 26 26 20.1799 26 13C26 5.8201 20.1799 0 13 0C5.8201 0 0 5.8201 0 13C0 20.1799 5.8201 26 13 26Z" fill="#C5FF55"></path>
+                                                <path d="M7.11719 13.8396L10.479 17.2014L18.8835 8.79688" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_51_57">
+                                                    <rect width="26" height="26" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>                                            {{__('Регулярные отчеты и аналитика')}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="section-box wow animate__animated animate__fadeIn box-how-it-work">
-        <div class="container"><a class="btn btn-brand-4-sm" href="#">{{__('Как это работает')}}</a>
-            <h2 class="mt-15 mb-20">{{__('Всего 3 простых и быстрых шага')}}<br class="d-none d-lg-block">{{__(' для размещения проекта или запуска инвестиций в работу!')}}</h2>
-            <p class="text-lg neutral-500 mb-55">{{__('Цифровая инвестиционная проектная платформа создана для того, чтобы сделать процесс инвестирования простым и доступным для всех.')}}<br class="d-none d-lg-block">{{__('Мы стремимся обеспечить прозрачность и безопасность, помогая вам достигать ваших финансовых целей!')}}</p>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="box-border-rounded">
-                        <div class="card-casestudy">
-                            <div class="card-title">
-                                <h6><span class="number">1</span>{{__('Выбрать роль')}}</h6>
-                            </div>
-                            <div class="card-desc">
-                                <p>{{__('При начальной регистрации необходимо определиться с ролью на платформе как Инициатора проекта или Инвестора. При дальнейшей работе возможно совмещение ролей у пользователя.')}}</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Страхование-->
+    <section class="section-box box-awards-section box-awards-section-2">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-4 mb-30">
+                    <h2 class="mb-15">{{__('Страхование рисков')}}</h2>
+                    <p class="text-md neutral-700">Holisticly actualize magnetic testing procedures for high-quality initiatives. Compellingly enhance client-based users whereas strategic bandwidth. Appropriately exploit cost effective.</p>
                 </div>
-                <div class="col-lg-3">
-                    <div class="box-border-rounded">
-                        <div class="card-casestudy">
-                            <div class="card-title">
-                                <h6><span class="number">2</span>{{__('Проект или портфель')}}</h6>
-                            </div>
-                            <div class="card-desc">
-                                <p>{{__('Разместите и активируйте проект, получите проектное «пространство» и выберите финансовую модель. Ознакомьтесь с инвестиционными предложениями. Если вы инвестор, выберите интересные проекты и запустите свой инвестиционный портфель.')}}</p>
-                            </div>
-                        </div>
+                <div class="col-lg-8 mb-30">
+                    <div class="row align-items-end">
+                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award.png" alt="Nivia"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award2.png" alt="Nivia"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award3.png" alt="Nivia"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award4.png" alt="Nivia"></div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="box-border-rounded">
-                        <div class="card-casestudy">
-                            <div class="card-title">
-                                <h6><span class="number">3</span>{{__('Результат')}}</h6>
-                            </div>
-                            <div class="card-desc">
-                                <p><span class="text-rub">{{__('Ваш проект проинвестирован. ')}}</span><br class="d-none d-lg-block"><span class="text-rub">{{__(' Ваш портфель приносит стабильный доход. ')}}</span><br>{{__('Система автоматического контроля распределения (проектные smart контракты) и прозрачность отчетности и учета блокирует нецелевое использование инвестиций , а система страхования от убытков обеспечивает сохранность портфеля.')}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-none d-lg-block">
-                    <img src="{{asset('MainPublic/assets/imgs/page/features/img-feature2.png')}}" alt="PF">
                 </div>
             </div>
-        </div>
-        <div class="container mt-25">
-            <div class="box-newsletter">
-                <div class="newsletter-left">
-                    <h2>Join our community</h2>
-                    <p class="text-md neutral-600">Work smarter with this time management and not hard join our newsletter for a better expertrience</p>
-                </div>
-                <div class="newsletter-right">
-                    <form action="#">
-                        <input class="form-control" type="text" placeholder="Email address...">
-                        <button class="btn btn-subscribe" type="submit">Subscribe
-                            <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 10.9993L18.4791 7.47852V10.3064H0V11.6924H18.4791V14.5203L22 10.9993Z" fill=""></path>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-box wow animate__animated animate__fadeIn box-have-project">
-        <div class="text-center">
-            <h2 class="heading-1 mt-15 mb-20">Have Any Project?<br class="d-none d-lg-block">Let’s Talk & Grow your Business</h2>
-            <p class="text-lg neutral-500 mb-35">We’r ready to help you. Our expert is here, just send a message.</p><a class="btn btn-brand-4" href="#">Get started
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewbox="0 0 22 22" fill="none">
-                    <path d="M22 10.9993L18.4791 7.47852V10.3064H0V11.6924H18.4791V14.5203L22 10.9993Z" fill=""></path>
-                </svg></a>
         </div>
     </section>
     <section class="section-box wow animate__animated animate__fadeIn box-our-track">
@@ -481,6 +310,46 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- Карусель модулей-->
+    <section class="section-box wow animate__animated animate__fadeIn box-logos">
+        <div class="container">
+            <div class="carouselTickerLogos2 carouselTicker_vertical" id="slide-logos">
+                <ul class="carouselTicker__list list-logos">
+
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ПРОЕКТЫ')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ЦФА')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ТОКЕНЫ')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ЭЦП')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('МЕГАПРОЕКТЫ')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('АУДИТ')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('СЕРТИФИКАТЫ')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ГЧП')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('СТРАХОВАНИЕ')}} </span>
+                    </li>
+                    <li class="carouselTicker__item">
+                        <span class="text-16-bold linear-3 p-2 rounded-2"> {{__('ICO')}} </span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>

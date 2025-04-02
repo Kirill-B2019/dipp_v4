@@ -19,7 +19,7 @@
                 <div class="mobile-menu-wrap mobile-header-border">
                     <nav>
                         <ul class="mobile-menu font-heading">
-                            <li class="has-children"><a class="active" href="index.html">Home Pages</a>
+                            <li class="has-children"><a class="active" href="/">Home Pages</a>
                                 <ul class="sub-menu">
                                     <li><a href="index.html">Business Solutions</a></li>
                                     <li><a href="index-2.html">Marketing App</a></li>
