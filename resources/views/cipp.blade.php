@@ -48,7 +48,7 @@
                                 <h6><span class="number">1</span>{{__('Выбрать роль')}}</h6>
                             </div>
                             <div class="card-desc">
-                                <p>{{__('При начальной регистрации необходимо определиться с ролью на платформе как Инициатора проекта или Инвестора. При дальнейшей работе возможно совмещение ролей у пользователя.')}}</p>
+                                <p>{{__('При начальной регистрации выберите свою роль на платформе: Инициатор проекта или Инвестор. В дальнейшем возможно совмещение ролей, что даст вам больше возможностей для участия.')}}</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,8 @@
                                 <h6><span class="number">2</span>{{__('Проект или портфель')}}</h6>
                             </div>
                             <div class="card-desc">
-                                <p>{{__('Разместите и активируйте проект, получите проектное «пространство» и выберите финансовую модель. Ознакомьтесь с инвестиционными предложениями. Если вы инвестор, выберите интересные проекты и запустите свой инвестиционный портфель.')}}</p>
+                                <p><strong>{{__('- Для инициаторов проектов: ')}}</strong>{{__('Разместите и активируйте свой проект, создайте проектное «пространство» и выберите подходящую финансовую модель. Ознакомьтесь с инвестиционными предложениями.')}}</p>
+                                <p><strong>{{__('- Для инвесторов: ')}}</strong>{{__('Исследуйте доступные проекты, выберите интересные и запустите свой инвестиционный портфель.')}}</p>
                             </div>
                         </div>
                     </div>
@@ -72,7 +73,8 @@
                                 <h6><span class="number">3</span>{{__('Результат')}}</h6>
                             </div>
                             <div class="card-desc">
-                                <p><span class="text-rub">{{__('Ваш проект проинвестирован. ')}}</span><br class="d-none d-lg-block"><span class="text-rub">{{__(' Ваш портфель приносит стабильный доход. ')}}</span><br>{{__('Система автоматического контроля распределения (проектные smart контракты) и прозрачность отчетности и учета блокирует нецелевое использование инвестиций , а система страхования от убытков обеспечивает сохранность портфеля.')}}</p>
+                                <p><strong>{{__('- Для инициаторов проектов: ')}}</strong>{{__('Ваш проект проинвестирован и реализовано задуманное.')}}</p>
+                                <p><strong>{{__('- Для инвесторов: ')}}</strong>{{__('Ваш портфель будет приносить стабильный доход. Система автоматического контроля распределения (проектные smart контракты) и прозрачная отчетность обеспечат защиту от нецелевого использования инвестиций.')}}</p>
                             </div>
                         </div>
                     </div>
@@ -242,20 +244,20 @@
             </div>
         </div>
     </section>
-    <!-- Страхование-->
+    <!-- Исламский аккаунт-->
     <section class="section-box box-awards-section box-awards-section-2">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-lg-4 mb-30">
-                    <h2 class="mb-15">{{__('Страхование рисков')}}</h2>
-                    <p class="text-md neutral-700">Holisticly actualize magnetic testing procedures for high-quality initiatives. Compellingly enhance client-based users whereas strategic bandwidth. Appropriately exploit cost effective.</p>
+                    <h2 class="mb-15">{{__('Исламский аккаунт')}}</h2>
+                    <p class="text-md neutral-700">{{__('финансовый инструмент без процентов (риба) и с ограничением спекуляций (гарар), который соответствует нормам шариата')}}</p>
                 </div>
                 <div class="col-lg-8 mb-30">
                     <div class="row align-items-end">
-                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award.png" alt="Nivia"></div>
-                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award2.png" alt="Nivia"></div>
-                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award3.png" alt="Nivia"></div>
-                        <div class="col-sm-3 col-6 mb-30"><img src="assets/imgs/page/about/award4.png" alt="Nivia"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="{{asset('MainPublic/assets/imgs/page/about/award.png')}}" alt="PF"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="{{asset('MainPublic/assets/imgs/page/about/award2.png')}}" alt="PF"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="{{asset('MainPublic/assets/imgs/page/about/award3.png')}}" alt="PF"></div>
+                        <div class="col-sm-3 col-6 mb-30"><img src="{{asset('MainPublic/assets/imgs/page/about/award4.png')}}" alt="PF"></div>
                     </div>
                 </div>
             </div>
@@ -835,5 +837,9 @@
             </div>
         </div>
     </section>
+
+    <div id="chart"></div>
+    <script src="{{asset('MainPublic/assets/js/script.js')}}" defer></script>
+
 </main>
 @endsection
