@@ -2262,6 +2262,18 @@ label {
   font-family: "Urbanist", sans-serif;
 }
 
+.card-casestud.card-image .card-image-left {
+    margin-right: 18px;
+    min-width: 60px;
+}
+.card-casestud .card-image .card-image-left img {
+    width: 60px;
+    display: block;
+}
+.card-casestud .card-image .card-image-info {
+    width: 100%;
+}
+
 .card-faq {
   width: 100%;
   margin-bottom: 53px;
@@ -2710,6 +2722,25 @@ label {
   margin-bottom: 33px;
 }
 
+.card-integration .card-title {
+    margin-bottom: 8px;
+}
+.card-integration .card-title .number {
+    width: 39px;
+    height: 39px;
+    background-color: #C5FF41;
+    color: #191919;
+    font-size: 24px;
+    line-height: 39px;
+    display: inline-block;
+    margin-right: 8px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+
 .card-question {
   background-color: #FFEDF4;
   border-radius: 16px;
@@ -3129,7 +3160,7 @@ label {
     justify-content: space-between;
     padding: 0 5%;
     position: relative;
-    width: 100vw; /* Занять всю ширину окна просмотра */
+    width: 95vw; /* Занять всю ширину окна просмотра */
     margin-left: calc(-50vw + 50%); /* Центрирование с учетом отступов */
     box-sizing: border-box; /* Учитывать отступы и границы в ширине */
 }
