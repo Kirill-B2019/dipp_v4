@@ -42,7 +42,7 @@ class BuyPlatformTokenController extends Controller
 
     }
 
-    public function showOrder($id)
+    public function ShowOrder($id)
     {
 
         $order = BuyPlatformToken::where('order_id', $id)->firstOrFail();
@@ -122,4 +122,20 @@ class BuyPlatformTokenController extends Controller
         return $data[$token]['usd'];
     }
 
+    public function CancelOrder($id)
+    {
+
+        $order = BuyPlatformToken::where('order_id', $id)->firstOrFail();
+        $order->update(['status' => 'cancel']);
+        return redirect()->route('platform_ico');
+    }
+    public function PaidOrder($id)
+    {
+
+        $order = BuyPlatformToken::where('order_id', $id)->firstOrFail();
+        $order->update(['status' => 'paid']);
+        return redirect()->route('platform_ico');
+    }
 }
+
+

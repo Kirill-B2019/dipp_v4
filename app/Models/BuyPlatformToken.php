@@ -9,5 +9,5 @@ class BuyPlatformToken extends Model
 {
     use SoftDeletes;
 
-
+    protected $guarded = [];
 }

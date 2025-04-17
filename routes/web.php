@@ -12,8 +12,9 @@ Route::get('/home', [MainPageController::class, 'index'])->name('home');
 //ico платформы
 Route::get('/', [PlatformICOController::class, 'index'])->name('platform_ico');
 Route::post('/buy-pftg', [BuyPlatformTokenController::class, 'CreateOrder'])->name('buy_PFTG');
-Route::get('/order/{id}', [BuyPlatformTokenController::class, 'showOrder'])->name('show_order_PFTG');
-
+Route::get('/order/{id}', [BuyPlatformTokenController::class, 'ShowOrder'])->name('show_order_PFTG');
+Route::get('/cancel/{id}', [BuyPlatformTokenController::class, 'CancelOrder'])->name('cancel_order_PFTG');
+Route::get('/paid/{id}', [BuyPlatformTokenController::class, 'PaidOrder'])->name('paid_order_PFTG');
 //Служебные маршруты
 
 //Административные маршруты

@@ -18,7 +18,7 @@
                             <div class="col-lg-7 col-md-6 mb-40">
                                 <form id="orderPayment">
                                 <div class="box-form-register">
-                                    <h3 class="title-register">{{__('Заявка №')}}{{$order->order_id}}</h3>
+                                    <h3 class="title-register">{{__('Заявка № ')}}{{$order->order_id}}</h3>
                                     <p class="text-md neutral-700">{{__('Создана ')}}{{$order->created_at}}</p>
                                     <p class="text-18-bold pb-10">{{__('Автоматическая отмена через: ')}}<span id="timer"></span></p>
 
@@ -118,7 +118,7 @@
                                         </div>
                                     </div>
                                     <div class="box-buttons-feature-4">
-                                        <a class="btn btn-cancel-2 mr-20" href="#">{{__('Отменить заявку')}}</a>
+                                        <a class="btn btn-cancel-2 mr-20" href="{{ route('cancel_order_PFTG', ['id' => $order->order_id]) }}">{{__('Отменить заявку')}}</a>
                                         <a class="btn btn-brand-4-medium" href="#">{{__('Заявка оплачена')}}
                                             <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M22 3.99934L18.4791 0.478516V3.30642H0V4.69236H18.4791V7.52031L22 3.99934Z" fill=""></path>
@@ -145,16 +145,7 @@
                                 </script>
                                 <div id="orderStatusStep-2"></div>
                                 <div id="orderStatusStep-3"></div>
-                           {{--     <div class="box-border-rounded">
-                                    <div class="card-casestudy">
-                                        <div class="card-title">
-                                            <h6><span class="number">3</span>Sales &amp; Earning</h6>
-                                        </div>
-                                        <div class="card-desc">
-                                            <p>We monitor performance, optimize campaigns, and make certain that you attain the results you anticipate. This is the ultimate step to ensure you are well on your way to achieving success and revenue from your project.</p>
-                                        </div>
-                                    </div>
-                                </div>--}}
+
                             </div>
                         </div>
                     </div>
