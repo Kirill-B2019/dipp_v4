@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="box-joined">
                         <div class="box-authors">
-                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft.png')}}" alt="PF страхование"></span>
+                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft2.png')}}" alt="PF страхование"></span>
                             <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft.png')}}" alt="PF общий"></span>
                             <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></span>
                         </div>
