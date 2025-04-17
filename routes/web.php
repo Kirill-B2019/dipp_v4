@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\BuyPlatformTokenController;
+use App\Http\Controllers\MainPageController;
+use App\Http\Controllers\PlatformICOController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Public\MainPageController;
-use App\Http\Controllers\Public\PlatformICOController;
 use Illuminate\Support\Facades\Route;
 
 //Публичные ссылки

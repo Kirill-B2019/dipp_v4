@@ -26,11 +26,16 @@ function updateAmount() {
         document.getElementById('cryptoAmount').textContent = `не выбран метод`;
         document.getElementById('cryptoAmount').classList.remove('neutral-1000');
         document.getElementById('cryptoAmount').classList.add('neutral-500');
+        document.getElementById('cryptoAmountHidden').value = 0;
+        document.getElementById('priceCryptoHidden').value = 0;
+
     }
     else {
         document.getElementById('cryptoAmount').textContent = `${amountInCrypto.toFixed(4)} ${paymentMethod.toUpperCase()}`;
         document.getElementById('cryptoAmount').classList.remove('neutral-500');
         document.getElementById('cryptoAmount').classList.add('neutral-1000');
+        document.getElementById('cryptoAmountHidden').value = `${amountInCrypto.toFixed(4)}`;
+        document.getElementById('priceCryptoHidden').value = rate;
         }
     calculateTokens();
 }
@@ -119,3 +124,64 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обновляем расчет при изменении суммы
     document.getElementById('amount').addEventListener('input', updateAmount);
 });
+// Используем переданную дату
+const startDate = new Date(createdAt); // Преобразуем строку в объект Date
+// Время через 30 минут
+const endDate = new Date(startDate.getTime() + 30 * 60 * 1000);
+
+function updateTimer() {
+    const now = new Date();
+    const timeLeft = endDate - now;
+
+    if (timeLeft <= 0) {
+        document.getElementById('timer').textContent = "Время вышло!";
+        clearInterval(interval);
+        return;
+    }
+
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+// Обновляем таймер каждую секунду
+const interval = setInterval(updateTimer, 1000);
+
+
+function copyText() {
+    const input = document.getElementById('copyInput');
+    input.select();
+    input.setSelectionRange(0, 99999); // Для мобильных устройств
+    navigator.clipboard.writeText(input.value)
+        .then(() => {
+            alert('Текст скопирован: ' + input.value);
+        })
+        .catch(err => {
+            console.error('Не удалось скопировать текст: ', err);
+        });
+}
+
+function checkTrueAdres(){
+    const agreeMyAdress = document.getElementById('checkMyAdress').checked;
+    var toast = new bootstrap.Toast(document.getElementById('myToast'));
+    if (!agreeMyAdress) {
+        document.getElementById('toastBody').textContent = `Необходимо подтвердить, что адрес принадлежит Вам`;
+        document.getElementById('orderStatusStep-2').innerHTML = '';
+        toast.show();
+    }else{
+
+        document.getElementById('orderStatusStep-2').innerHTML = '<div class="box-border-rounded">' +
+            '<div class="card-casestudy">' +
+            '<div class="card-title">' +
+            '<h6><span class="number">2</span>' + addressConfirmationTitle + '</h6>' +
+            '</div>' +
+            '<div class="card-desc">' +
+            '<p>' + addressConfirmationMessage + '</p>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+    }
+
+
+}

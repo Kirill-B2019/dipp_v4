@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16a5d27046a765aa8a3b8659ffb4c426",
+    "content-hash": "e8e2e8c5047d1a77e3f6a47132d4ed5b",
     "packages": [
+        {
+            "name": "bacon/bacon-qr-code",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Bacon/BaconQrCode.git",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/8674e51bb65af933a5ffaf1c308a660387c35c22",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22",
+                "shasum": ""
+            },
+            "require": {
+                "dasprid/enum": "^1.0.3",
+                "ext-iconv": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phly/keep-a-changelog": "^2.1",
+                "phpunit/phpunit": "^7 | ^8 | ^9",
+                "spatie/phpunit-snapshot-assertions": "^4.2.9",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "suggest": {
+                "ext-imagick": "to generate QR code images"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BaconQrCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "BaconQrCode is a QR code generator for PHP.",
+            "homepage": "https://github.com/Bacon/BaconQrCode",
+            "support": {
+                "issues": "https://github.com/Bacon/BaconQrCode/issues",
+                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
+            },
+            "time": "2022-12-07T17:46:57+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.3",
@@ -136,6 +190,289 @@
             "time": "2024-02-09T16:56:22+00:00"
         },
         {
+            "name": "ccxt/ccxt",
+            "version": "1.53.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ccxt/ccxt.git",
+                "reference": "df03acf6997ff35ee84abadc80bebcbe13e5efdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ccxt/ccxt/zipball/df03acf6997ff35ee84abadc80bebcbe13e5efdc",
+                "reference": "df03acf6997ff35ee84abadc80bebcbe13e5efdc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-curl": "*",
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "pear/console_table": "1.3.1",
+                "php": ">=5.4.0",
+                "symfony/polyfill-mbstring": "^1.7"
+            },
+            "suggest": {
+                "clue/buzz-react": "Required for asynchronous API calls to exchanges with PHP",
+                "clue/http-proxy-react": "Required for using a proxy when doing asynchronous API calls to exchanges with PHP",
+                "react/event-loop": "Required for asynchronous API calls to exchanges with PHP",
+                "recoil/react": "Required for asynchronous API calls to exchanges with PHP",
+                "recoil/recoil": "Required for asynchronous API calls to exchanges with PHP"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "ccxt.php"
+                ],
+                "psr-4": {
+                    "ccxt\\": "php/",
+                    "ccxt_async\\": "php/async/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Kroitor",
+                    "email": "igor.kroitor@gmail.com",
+                    "homepage": "https://github.com/kroitor",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Vitaly Gordon",
+                    "email": "rocket.mind@gmail.com",
+                    "homepage": "https://github.com/xpl",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Carlo Revelli",
+                    "email": "carlo.revelli@berkeley.edu",
+                    "homepage": "https://github.com/frosty00",
+                    "role": "Junior Developer"
+                }
+            ],
+            "description": "A JavaScript / Python / PHP cryptocurrency trading library with support for more than 90 bitcoin/altcoin exchanges",
+            "homepage": "https://github.com/ccxt/ccxt",
+            "keywords": [
+                "1BTCXE",
+                "1Broker",
+                "ACX",
+                "ANX",
+                "ANXPro",
+                "BL3P",
+                "BTC Markets",
+                "BTC Trade UA",
+                "BTCC",
+                "BTCChina",
+                "BTCExchange",
+                "BTCTrader",
+                "BTCTurk",
+                "BTCX",
+                "BX.in.th",
+                "Bit2C",
+                "BitBay",
+                "BitBays",
+                "BitMEX",
+                "BitMarket",
+                "Bitcoin.co.id",
+                "Bleutrade",
+                "BlinkTrade",
+                "BtcBox",
+                "Bter.com",
+                "C-CEX",
+                "CEX.IO",
+                "CHBTC",
+                "CNY",
+                "ChileBit",
+                "CoinMate",
+                "CoinSpot",
+                "Coinsecure",
+                "Crypto Capital",
+                "DOGE",
+                "EUR",
+                "EXMO",
+                "FYB-SE",
+                "FYB-SG",
+                "FoxBit",
+                "Gatecoin",
+                "Gemini",
+                "Huobi",
+                "HuobiPRO",
+                "LakeBTC",
+                "Liqui",
+                "LiveCoin",
+                "OKCoin",
+                "OKCoin.cn",
+                "OKCoin.com",
+                "OKEX",
+                "Paymium",
+                "Poloniex",
+                "QUOINE",
+                "Qryptos",
+                "QuadrigaCX",
+                "Southxchange",
+                "SurBitcoin",
+                "TheRockTrading",
+                "Tidex",
+                "USD",
+                "UrduBit",
+                "VBTC",
+                "Vaultoro",
+                "VirWoX",
+                "Wex",
+                "YoBit",
+                "Zaif",
+                "acx.io",
+                "algorithmic",
+                "algotrading",
+                "altcoin",
+                "altcoins",
+                "api",
+                "arbitrage",
+                "backtest",
+                "backtesting",
+                "binance",
+                "binance.com",
+                "bit2c.co.il",
+                "bitcoin",
+                "bitcoincoid",
+                "bitfinex",
+                "bitflyer",
+                "bitflyer.jp",
+                "bithumb",
+                "bithumb.com",
+                "bitlish",
+                "bitso",
+                "bitstamp",
+                "bittrex",
+                "bleutrade.com",
+                "bot",
+                "btc",
+                "btc-e",
+                "btc-trade.com.ua",
+                "btc-x",
+                "btcbox.co.jp",
+                "btce",
+                "btcexchange.ph",
+                "btcmarkets",
+                "btcmarkets.net",
+                "btctrader.com",
+                "btcturk.com",
+                "bter",
+                "ccex",
+                "cex",
+                "chilebit.net",
+                "coin",
+                "coincheck",
+                "coingi",
+                "coingi.com",
+                "coinmarketcap",
+                "coins",
+                "coinspot.com.au",
+                "crypto",
+                "crypto currency",
+                "crypto market",
+                "cryptocapital.co",
+                "cryptocurrency",
+                "currencies",
+                "currency",
+                "darkcoin",
+                "dash",
+                "digital currency",
+                "dogecoin",
+                "dsx",
+                "dsx.uk",
+                "e-commerce",
+                "etc",
+                "eth",
+                "ether",
+                "ethereum",
+                "exchange",
+                "exchanges",
+                "flowBTC",
+                "flowbtc.com",
+                "foxbit.exchange",
+                "framework",
+                "gdax",
+                "hitbtc",
+                "huobi.pro",
+                "independent reserve",
+                "independentreserve.com",
+                "invest",
+                "investing",
+                "investor",
+                "itBit",
+                "jubi.com",
+                "kraken",
+                "lakebtc.com",
+                "library",
+                "light",
+                "liqui.io",
+                "litecoin",
+                "ltc",
+                "luno",
+                "market",
+                "market data",
+                "markets",
+                "mercado",
+                "mercadobitcoin",
+                "mercadobitcoin.br",
+                "merchandise",
+                "merchant",
+                "minimal",
+                "mixcoins",
+                "mixcoins.com",
+                "nova",
+                "novaexchange",
+                "novaexchange.com",
+                "okex.com",
+                "order",
+                "order book",
+                "orderbook",
+                "price",
+                "price data",
+                "pricefeed",
+                "private",
+                "public",
+                "ripple",
+                "strategy",
+                "surbitcoin.com",
+                "tidex.com",
+                "toolkit",
+                "trade",
+                "trader",
+                "trading",
+                "urdubit.com",
+                "vbtc.exchange",
+                "vbtc.vn",
+                "volume",
+                "wex.nz",
+                "xBTCe",
+                "xbt",
+                "xbtce.com",
+                "xrp",
+                "yobit.net",
+                "yunbi",
+                "zec",
+                "zerocoin"
+            ],
+            "support": {
+                "issues": "https://github.com/ccxt/ccxt/issues",
+                "source": "https://github.com/ccxt/ccxt/tree/1.53.1"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/ccxt",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2021-07-13T22:50:19+00:00"
+        },
+        {
             "name": "composer/semver",
             "version": "3.4.3",
             "source": {
@@ -215,6 +552,56 @@
                 }
             ],
             "time": "2024-09-19T14:15:21+00:00"
+        },
+        {
+            "name": "dasprid/enum",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DASPRiD/Enum.git",
+                "reference": "8dfd07c6d2cf31c8da90c53b83c026c7696dda90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/8dfd07c6d2cf31c8da90c53b83c026c7696dda90",
+                "reference": "8dfd07c6d2cf31c8da90c53b83c026c7696dda90",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1 <9.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7 || ^8 || ^9 || ^10 || ^11",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DASPRiD\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP 7.1 enum implementation",
+            "keywords": [
+                "enum",
+                "map"
+            ],
+            "support": {
+                "issues": "https://github.com/DASPRiD/Enum/issues",
+                "source": "https://github.com/DASPRiD/Enum/tree/1.0.6"
+            },
+            "time": "2024-08-09T14:30:48+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -3053,6 +3440,65 @@
             "time": "2025-03-30T23:39:48+00:00"
         },
         {
+            "name": "pear/console_table",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Console_Table.git",
+                "reference": "1930c11897ca61fd24b95f2f785e99e0f36dcdea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Console_Table/zipball/1930c11897ca61fd24b95f2f785e99e0f36dcdea",
+                "reference": "1930c11897ca61fd24b95f2f785e99e0f36dcdea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "suggest": {
+                "pear/Console_Color2": ">=0.1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Table.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Schneider",
+                    "homepage": "http://pear.php.net/user/yunosh"
+                },
+                {
+                    "name": "Tal Peer",
+                    "homepage": "http://pear.php.net/user/tal"
+                },
+                {
+                    "name": "Xavier Noguer",
+                    "homepage": "http://pear.php.net/user/xnoguer"
+                },
+                {
+                    "name": "Richard Heyes",
+                    "homepage": "http://pear.php.net/user/richard"
+                }
+            ],
+            "description": "Library that makes it easy to build console style tables.",
+            "homepage": "http://pear.php.net/package/Console_Table/",
+            "keywords": [
+                "console"
+            ],
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Console_Table",
+                "source": "https://github.com/pear/Console_Table"
+            },
+            "time": "2018-01-25T20:47:17+00:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.9.3",
             "source": {
@@ -3829,6 +4275,74 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "simplesoftwareio/simple-qrcode",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SimpleSoftwareIO/simple-qrcode.git",
+                "reference": "916db7948ca6772d54bb617259c768c9cdc8d537"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SimpleSoftwareIO/simple-qrcode/zipball/916db7948ca6772d54bb617259c768c9cdc8d537",
+                "reference": "916db7948ca6772d54bb617259c768c9cdc8d537",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^2.0",
+                "ext-gd": "*",
+                "php": ">=7.2|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~1",
+                "phpunit/phpunit": "~9"
+            },
+            "suggest": {
+                "ext-imagick": "Allows the generation of PNG QrCodes.",
+                "illuminate/support": "Allows for use within Laravel."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "QrCode": "SimpleSoftwareIO\\QrCode\\Facades\\QrCode"
+                    },
+                    "providers": [
+                        "SimpleSoftwareIO\\QrCode\\QrCodeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SimpleSoftwareIO\\QrCode\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Simple Software LLC",
+                    "email": "support@simplesoftware.io"
+                }
+            ],
+            "description": "Simple QrCode is a QR code generator made for Laravel.",
+            "homepage": "https://www.simplesoftware.io/#/docs/simple-qrcode",
+            "keywords": [
+                "Simple",
+                "generator",
+                "laravel",
+                "qrcode",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/SimpleSoftwareIO/simple-qrcode/issues",
+                "source": "https://github.com/SimpleSoftwareIO/simple-qrcode/tree/4.2.0"
+            },
+            "time": "2021-02-08T20:43:55+00:00"
         },
         {
             "name": "symfony/clock",
@@ -9005,7 +9519,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.2"
+        "php": "^8.2",
+        "ext-curl": "*"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"

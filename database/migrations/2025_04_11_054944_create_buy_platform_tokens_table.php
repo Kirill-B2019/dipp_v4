@@ -21,7 +21,11 @@ return new class extends Migration
             $table->float('price');
             $table->integer('token');
             $table->integer('token_bonus')->default('0');
+            $table->integer('token_total');
             $table->string('status')->default('pending');
+            $table->string('payment_status')->default('pending');
+            $table->float('price_crypto');
+            $table->float('amount_crypto');
             $table->timestamps();
             $table->softDeletes();
         });

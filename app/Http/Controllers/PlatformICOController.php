@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Public;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\GoldRate;
-use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 
@@ -15,11 +13,12 @@ class PlatformICOController extends Controller
         $goldPrice = $this->getTodayAuPrice();
         $contract = 'TCzvVtyPKaVejCXBjD8SZZuSPi4RK3jb4z';
         $holders = $this->contractHoldersInfo();
+        $sendSumm = $this->contractSendSum();
+        $percent =intval(ceil(($sendSumm['totalSum']/700000)*100));
+        $sendSumm = $sendSumm['totalSum'];
         $ExchangeRates = json_encode($this->getExchangeRates());
 
-
-/*dd($ExchangeRates);*/
-        return view('platformico.ico', compact('goldPrice','holders','contract','ExchangeRates'));
+        return view('platformico.ico', compact('goldPrice','holders','contract','ExchangeRates','sendSumm','percent'));
     }
 
     public function getTodayAuPrice()
@@ -110,7 +109,7 @@ class PlatformICOController extends Controller
             }
         }
         return [
-            'totalSum'=> number_format($totalSum*0.000001, 6, '.', ' '),
+            'totalSum'=> number_format($totalSum*0.000001, 0, '.', ''),
             'totalOnwer'=>number_format($totalOnwer*0.000001, 6, '.', ' '),
         ];
     }

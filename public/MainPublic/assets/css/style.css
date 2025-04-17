@@ -497,6 +497,11 @@ h6, .heading-6 {
   font-weight: 500;
 }
 
+.text-ss {
+    font-size: 12px;
+    line-height: 18px;
+}
+
 .text-sm {
   font-size: 14px;
   line-height: 24px;
@@ -684,6 +689,11 @@ h6, .heading-6 {
 
 .bg-2 {
   background-color: #F7FFE4 !important;
+}
+.bg-2-line {
+    background-color: #F7FFE4 !important;
+    border-top: 1px solid rgba(115, 114, 114, 0.2);
+    border-bottom: 1px solid rgba(115, 114, 114, 0.2);
 }
 
 .bg-3 {
@@ -1022,6 +1032,39 @@ body {
 .btn.btn-learmore-2:hover svg {
   fill: #52B8AA;
 }
+
+.btn.btn-cancel-2 {
+    padding: 0px 0px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Urbanist", sans-serif;
+    color: #191919;
+    display: flex;
+    align-items: center;
+}
+.btn.btn-cancel-2 span {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 10px;
+    background-color: #C5FF41;
+}
+.btn.btn-cancel-2 svg {
+    fill: #191919;
+}
+.btn.btn-cancel-2:hover {
+    color: #52B8AA;
+}
+.btn.btn-learmore-2:hover svg {
+    fill: #52B8AA;
+}
+
+
+
 .btn.btn-link {
   color: #191919;
   font-size: 14px;
@@ -1328,6 +1371,19 @@ body {
 .btn.btn-brand-4-medium:hover {
   background: #ECEEF2;
 }
+
+.btn.btn-brand-4-sm {
+    padding: 4px 21px;
+    background-color: #C5FF41;
+    border: 1px solid #C5FF41;
+    border-radius: 36px;
+    color: #191919;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Urbanist", sans-serif;
+}
+
 .btn.btn-brand-4-sm {
   padding: 4px 21px;
   background-color: #C5FF41;
@@ -7242,7 +7298,10 @@ a.icon-socials:hover {
   background-position: top right;
   background-size: auto;
 }
+.box-imazing-features-white {
 
+    padding: 142px 0px 112px 0px;
+}
 .box-faqs-2 {
   background-color: #1E1E1E;
   background-image: url(../imgs/page/homepage2/bg-imazing2.png);

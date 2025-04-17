@@ -47,3 +47,89 @@
 .toast-alert .toast-header strong {
     color: #721c24;
 }
+/********/
+.card-exchenge-order {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #ECEEF2;
+    padding: 12px;
+    margin-bottom: 35px;
+}
+.card-exchenge-order:Hover {
+    box-shadow: 0px 8px 18px -4px rgba(12, 49, 49, 0.1);
+}
+.card-exchenge-order .card-image {
+    display: flex;
+    align-items: center;
+}
+.card-exchenge-order .card-image .card-image-left {
+    margin-right: 10px;
+    min-width: 40px;
+}
+.card-exchenge-order .card-image .card-image-left img {
+    width: 40px;
+    display: block;
+}
+.card-exchenge-order .card-image .card-image-info {
+    width: 100%;
+}
+.card-exchenge-order .card-image .card-image-info h5 {
+    margin-bottom: 3px;
+}
+.card-exchenge-order .card-info p {
+    margin-bottom: 13px;
+}
+
+.card-exchenge-order .card-title {
+    margin-bottom: 8px;
+}
+.card-exchenge-order .card-title .number {
+    width: 29px;
+    height: 29px;
+    background-color: #C5FF41;
+    color: #191919;
+    font-size: 24px;
+    line-height: 39px;
+    display: inline-block;
+    margin-right: 8px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.card-exchenge-order .card-bottom{
+    border-top: 1px dotted #ECEEF2;
+    margin-top: 8px;
+}
+
+
+.copy-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.copy-input {
+    padding-right: 30px; /* Пространство для кнопки */
+    background-color: #C5FF41;
+}
+.copy-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.progress-bar-ico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #C4FE41;
+    transition: width 0.6s ease;
+}

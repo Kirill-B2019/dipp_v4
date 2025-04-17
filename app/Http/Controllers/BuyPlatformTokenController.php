@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ICOBuyPFTGRequest;
 use App\Models\BuyPlatformToken;
 use Illuminate\Support\Facades\Log;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class BuyPlatformTokenController extends Controller
 {
@@ -21,7 +21,11 @@ class BuyPlatformTokenController extends Controller
         $order->price = $request['price'];
         $order->token = $request['token'];
         $order->token_bonus = $request['token_bonus'];
+        $order->token_total = $request['token']+$request['token_bonus'];
+        $order->price_crypto = $request['priceCrypto'];
+        $order->amount_crypto = $request['cryptoAmount'];
         $order->status = 'created';
+
 
         // Попытка сохранить ордер в базе данных
 
@@ -40,25 +44,56 @@ class BuyPlatformTokenController extends Controller
 
     public function showOrder($id)
     {
+
         $order = BuyPlatformToken::where('order_id', $id)->firstOrFail();
-        $cionImg = '';
+
+
         switch ($order->payment_method){
             case 'btc':
                 $cionImg = 'bitcoin.webp';
+                $price = $this->getCryptoPrice('bitcoin');
+                $recive_wallet = 'bc1qymsskzjlkrkpxmqx8388swjqtcw6fng5d3galg';
+                $qrString = "bitcoin:{$recive_wallet}?amount={$order->amount_crypto}&label=" . urlencode($order->order_id);
+                $qr = $this->QRgenerate($qrString);
+                $cryptoName = 'BTC';
                 break;
             case 'eth':
                 $cionImg = 'ethereum.webp';
+                $price = $this->getCryptoPrice('ethereum');
+                $recive_wallet = '0xC2d60259f71adB1d1c1E6E07283b6Ee471dc6aba';
+                $qrString = "ethereum:{$recive_wallet}?value={$order->amount_crypto}&message=" . urlencode($order->order_id);
+                $qr = $this->QRgenerate($qrString);
+                $cryptoName = 'ETH';
                 break;
             case 'trx':
-                $cionImg = 'Tether.webp';
+                $cionImg = 'tron-logo.webp';
+                $price = $this->getCryptoPrice('tron');
+                $recive_wallet = 'TK1bBEYr4Y6XmyVZRiqzVYjC5DSyU6GCE5';
+                $qrString = "tron:{$recive_wallet}?amount={$order->amount_crypto}&memo=" . urlencode($order->order_id);
+                $qr = $this->QRgenerate($qrString);
+                $cryptoName = 'TRX';
                 break;
             case 'usdt-trc20':
+                $cionImg = 'Tether.webp';
+                $price = $this->getCryptoPrice('tether');
+                $recive_wallet = 'TK1bBEYr4Y6XmyVZRiqzVYjC5DSyU6GCE5';
+                $qrString = "tron:{$recive_wallet}?amount={$order->amount_crypto}&memo=" . urlencode($order->order_id);
+                $qr = $this->QRgenerate($qrString);
+                $cryptoName = 'USDT (TRC)';
+                break;
             case 'usdt-erc20':
-                $cionImg = 'tron-logo.webp';
+                $cionImg = 'Tether.webp';
+                $price = $this->getCryptoPrice('tether');
+                $recive_wallet = '0xC2d60259f71adB1d1c1E6E07283b6Ee471dc6aba';
+                $qrString = "ethereum:{$recive_wallet}?value={$order->amount_crypto}&message=" . urlencode($order->order_id);
+                $qr = $this->QRgenerate($qrString);
+                $cryptoName = 'USDT (ERC)';
                 break;
         }
 
-        return view('platformico.order', compact('order','cionImg'));
+
+
+        return view('platformico.order', compact('order','cionImg','qr','price','recive_wallet','cryptoName'));
     }
 
 
@@ -69,6 +104,22 @@ class BuyPlatformTokenController extends Controller
         $orderId = rand(100000, 999999); // Генерация случайного числа в заданном диапазоне
         } while (BuyPlatformToken::where('order_id', $orderId)->exists()); // Проверка уникальности
     return $orderId;
+    }
+
+    //QR и номер кошелька
+    public function QRgenerate($string) {
+
+        return $qrCodes = QrCode::size(120)->color(43,44,45)->generate($string);
+
+
+    }
+
+    function getCryptoPrice($token)
+    {
+        $url = 'https://api.coingecko.com/api/v3/simple/price?ids='.$token.'&vs_currencies=usd';
+        $response = file_get_contents($url);
+        $data = json_decode($response, true);
+        return $data[$token]['usd'];
     }
 
 }
