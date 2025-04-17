@@ -4,7 +4,16 @@
             <div class="col-md-6 col-sm-12 mb-30"><a href="/"><img alt="PF" src="{{asset('MainPublic/assets/imgs/template/logo.svg')}}"></a>
                 <div class="mt-20 mb-20">
                     <p class="text-md neutral-600 mb-10">{{__('Цифровая инвестиционная проектная платформа')}}</p>
-                    <p class="text-md neutral-600"></p>
+                    <p class="text-sm neutral-500">{{__('цифровая инфраструктура новой экономики, где сливаются технологии, капитал и регуляторика')}}</p>
+
+                    <div class="d-flex mt-60 mb-60">
+
+                        <a class="hover-up mr-5" href="https://project-wallet.rork.app" target="_blank"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/googleplay.png')}}" alt="PF"></a>
+                        <a class="hover-up" href="https://project-wallet.rork.app" target="_blank"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/appstore.png')}}" alt="PF"></a></div>
+                    <div class="text-sm mb-10 neutral-300">{{__('Прототип мобильного приложения:')}}</div>
+                    <div class="text-sm mb-10 neutral-300">{{__('- Email: user@example.com')}}</div>
+                    <div class="text-sm mb-10 neutral-300">{{__('- Password: password')}}</div>
+
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
