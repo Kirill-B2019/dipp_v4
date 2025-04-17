@@ -20,7 +20,7 @@
                 <h5 class="neutral-0 mb-10 text-18-semibold neutral-0">{{__('Модули в новом релизе (v 0.11) :')}}</h5>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-30">
-                        <h5 class="neutral-0 mb-10 text-18-semibold neutral-0">{{__('Пропекты')}}</h5>
+                        <h5 class="neutral-0 mb-10 text-18-semibold neutral-0">{{__('Проекты')}}</h5>
                         <ul class="menu-footer">
                             <li><a href="#">{{__('Стартапы')}}</a></li>
                             <li><a href="#">{{__('Монопроекты')}}</a></li>
@@ -35,7 +35,7 @@
                         <h5 class="neutral-0 mb-10 text-18-semibold neutral-0">{{__('Эксперты')}}</h5>
                         <ul class="menu-footer">
                             <li><a href="#">{{__('AI Экспертиза')}}</a></li>
-                            <li><a href="#">{{__('Экспертыные рейтинги')}}</a></li>
+                            <li><a href="#">{{__('Экспертные рейтинги')}}</a></li>
                             <li><a href="#">{{__('Аналитика')}}</a></li>
                         </ul>
                     </div>
