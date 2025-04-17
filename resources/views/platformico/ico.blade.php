@@ -20,7 +20,7 @@
                     <div class="box-banner-left">
                         <h3 class="display-6 mb-30 mt-15 neutral-500">{{__('СИД-РАУНД ПРОДАЖА (Seed Round)')}}</h3>
                         <h1 class="display-2 mb-30 mt-15 neutral-0">{{__('Ограниченная эмиссия токена PFTG')}}</h1>
-                        <a class="btn btn-brand-5-new" href="#buyPFT"><span>PFTG</span>{{__('Принять участие')}}
+                        <a class="btn btn-brand-5-new" href="#buyPFTG"><span>PFTG</span>{{__('Принять участие')}}
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewbox="0 0 22 22" fill="none">
                                 <path d="M22 11.0003L18.4791 7.47949V10.3074H0V11.6933H18.4791V14.5213L22 11.0003Z" fill=""></path>
                             </svg></a>
