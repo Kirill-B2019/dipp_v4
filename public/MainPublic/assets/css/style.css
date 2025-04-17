@@ -1372,6 +1372,25 @@ body {
   background: #ECEEF2;
 }
 
+.btn.btn-brand-4-medium-hover {
+    padding: 14px 25px;
+    background: #ECEEF2;
+    border-radius: 8px;
+    color: #191919;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    font-family: "Urbanist", sans-serif;
+    display: flex;
+    align-items: center;
+}
+.btn.btn-brand-4-medium-hover svg {
+    fill: #191919;
+    margin-left: 5px;
+}
+.btn.btn-brand-4-medium-hover:hover {
+    background-color: #C5FF41;
+}
 .btn.btn-brand-4-sm {
     padding: 4px 21px;
     background-color: #C5FF41;

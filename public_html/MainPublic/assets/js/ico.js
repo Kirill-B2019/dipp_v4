@@ -135,6 +135,14 @@ function updateTimer() {
 
     if (timeLeft <= 0) {
         document.getElementById('timer').textContent = "Время вышло!";
+        document.getElementById('buttonPaid').href = '/';
+        document.getElementById('buttonPaid').textContent = "Время вышло! Необходимо заново заполнить заявку.";
+        document.getElementById('buttonPaid').classList.remove('btn-brand-4-medium');
+        document.getElementById('buttonPaid').classList.add('btn-brand-4-medium-hover');
+        document.getElementById('buttonCancel').classList.remove('mr-20');
+        document.getElementById('buttonCancel').classList.add('d-none');
+
+
         clearInterval(interval);
         return;
     }
