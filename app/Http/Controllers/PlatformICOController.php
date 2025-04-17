@@ -12,10 +12,9 @@ class PlatformICOController extends Controller
     {
         $goldPrice = $this->getTodayAuPrice();
         $contract = 'TCzvVtyPKaVejCXBjD8SZZuSPi4RK3jb4z';
-        $holders = $this->contractHoldersInfo();
-        $sendSumm = $this->contractSendSum();
-        $percent =intval(ceil(($sendSumm['totalSum']/700000)*100));
-        $sendSumm = $sendSumm['totalSum'];
+        $holders = 6;//$this->contractHoldersInfo();
+        $sendSumm = 12443;//$this->contractSendSum();
+        $percent = 2; //intval(ceil(($sendSumm['totalSum']/700000)*100));
         $ExchangeRates = json_encode($this->getExchangeRates());
 
         return view('platformico.ico', compact('goldPrice','holders','contract','ExchangeRates','sendSumm','percent'));

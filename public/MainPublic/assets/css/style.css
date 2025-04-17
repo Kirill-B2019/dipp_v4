@@ -8822,6 +8822,23 @@ a.icon-socials:hover {
   width: 50%;
   color: #5A5B5B;
 }
+.list-check-black-100 {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 490px;
+}
+.list-check-black-100 li {
+    display: inline-block;
+    background: url(../imgs/page/term/check.png) no-repeat left center;
+    padding: 1px 20px 1px 36px;
+    margin-bottom: 16px;
+    width: 100%;
+    color: #5A5B5B;
+}
 
 .sidebar-border-left {
   border-left: 4px solid #C5FF41;

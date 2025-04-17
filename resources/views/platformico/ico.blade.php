@@ -84,6 +84,45 @@
 
                                 </div>
                             </div>
+                            <div class="card-integration bg-2">
+                                <div class="card-title">
+                                    <h6><span class="number">2</span>{{__('Заполнить форму покупки')}}</h6>
+                                </div>
+                                <div class="card-image">
+
+                                    <div class="card-image-info">
+                                        {{__('Бонус ')}}<span class="h1">10 %*</span> {{__(' от ')}}<span class="h3">1 000</span> USD
+                                        <p class="text-md neutral-500">{{__('NB токены PFTG поступают через сеть TRON, поэтому для зачисления укажите адрес получения TRX')}} </p>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <ul class="list-check-black-100">
+                                        <li>{{{__('Указать сумму или выбрать из предложенных')}}}</li>
+                                        <li>{{__('Выбрать способ оплаты из предложенных')}}</li>
+                                        <li>{{__('Указать адрес (кошелек) получения')}}</li>
+                                    </ul>
+                                    <p class="text-ss neutral-700">{{__('*Бонус начисляется в PFTG')}} </p>
+                                 </div>
+                            </div>
+                            <div class="card-integration bg-2">
+                                <div class="card-title">
+                                    <h6><span class="number">3</span>{{__('Получить токены')}}</h6>
+                                </div>
+                                <div class="card-image">
+                                    <div class="card-image-info">
+                                        <p class="text-md neutral-1000">{{__('Проверка транзакций происходит с ручным подтверждением')}} </p>
+                                        {{__('Срок зачисления токенов ')}}<span class="h3">PFTG</span>{{__(' от ')}}<span class="h3">1</span> {{__(' до ')}}<span class="h3">24</span> {{__('часов')}}
+                                    </div>
+                                </div>
+                                <div class="card-info">
+
+                                    <p class="neutral-500"><span class="text_md">{{__('После оплаты сохраните номер заявки')}}</span> <span class="text_ss neutral-1000">{{__(' (доступен после отправки отправки формы)')}}</span></p>
+                                    <p class="text-sm neutral-500">{{__('По возникающим с заявкой вопросам, наши операторы готовы ответить в телеграмм канале Call-центра поддержки эмиссии')}} <a href="https://t.me/PFTGoldHelper_bot" target="_blank">@PFTGoldHelper_bot</a></p>
+
+
+
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-8 mb-40">
                             <form id="tokenPurchaseForm" action="{{route('buy_PFTG')}}" method="POST">
@@ -185,12 +224,8 @@
                                             <input class="cb-agree" type="checkbox" id="agreeTerms" checked>{{__('Согласие с ')}}
                                             <a class="text-md neutral-500" href="#">{{__('условиями продажи')}}</a>
                                         </label>
-
-
-                                    </div>
-
-
-                                </div>
+                                   </div>
+                              </div>
                             </form>
                         </div>
 
