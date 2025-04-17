@@ -63,7 +63,7 @@
                                     <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF"></div>
                                     <div class="card-image-info">
                                         {{__('Сегодня ')}}<span id="currentPrice" class="h1">{{$goldPrice}}</span> USD/PFTG
-                                       <p class="text-md neutral-500">{{__('Привилигированный токен управления платформой (PFTG)')}} </p>
+                                       <p class="text-md neutral-500">{{__('Привилегированный токен управления платформой (PFTG)')}} </p>
                                     </div>
                                 </div>
                                 <div class="card-info">
@@ -312,7 +312,7 @@
                             <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF"></div>
                             <div class="card-image-info">
                                 <span class="h3">PFTGold</span>
-                                <p class="text-md neutral-500">{{__('Привилигированный токен управления платформой (PFTG)')}} </p>
+                                <p class="text-md neutral-500">{{__('Привилегированный токен управления платформой (PFTG)')}} </p>
                                 <p class="text-md neutral-700">{{__('Объем эмиссии 3 500 000 PFTG')}} </p>
                             </div>
                         </div>
