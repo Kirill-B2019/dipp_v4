@@ -36,8 +36,8 @@
                 <div class="container">
                     <div class="box-joined">
                         <div class="box-authors">
-                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/iPFT.png')}}" alt="PF страхование"></span>
-                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft.png')}}" alt="PF общий"></span>
+                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/iPFT2.png')}}" alt="PF страхование"></span>
+                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/PFT.png')}}" alt="PF общий"></span>
                             <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></span>
                         </div>
                         <span class="text-lg d-inline-block">{{__('Разные токены для разных задач: проекты, управление, страхование')}}</span>
@@ -355,7 +355,7 @@
 
                         </div>
                         <div class="card-image">
-                            <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft2.png')}}" alt="PF"></div>
+                            <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/iPFT.png')}}" alt="PF"></div>
                             <div class="card-image-info">
                                 <span class="h3">iPFT</span>
                                 <p class="text-md neutral-500">{{__('Не подлежит реализации')}} </p>

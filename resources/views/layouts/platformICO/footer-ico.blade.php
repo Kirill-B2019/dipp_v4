@@ -83,7 +83,7 @@
                             <div class="text-center text-md-start">
                                 <div class="text-start d-inline-block">
                                     <p class="text-lg title-follow neutral-0">{{__('Токены')}}
-                                    <div class="box-socials-footer"><a class="icon-socials icon-facebook" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></a><a class="icon-socials icon-instagram" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft-tr.png')}}" alt="PF общий"></a><a class="icon-socials icon-twitter" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft2.png')}}" alt="PF страхование"></a>
+                                    <div class="box-socials-footer"><a class="icon-socials icon-facebook" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></a><a class="icon-socials icon-instagram" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/PFT-tr.png')}}" alt="PF общий"></a><a class="icon-socials icon-twitter" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/iPFT.png')}}" alt="PF страхование"></a>
                                     </div>
                                     </p>
                                 </div>
