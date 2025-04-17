@@ -355,7 +355,7 @@
 
                         </div>
                         <div class="card-image">
-                            <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft.png')}}" alt="PF"></div>
+                            <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft2.png')}}" alt="PF"></div>
                             <div class="card-image-info">
                                 <span class="h3">iPFT</span>
                                 <p class="text-md neutral-500">{{__('Не подлежит реализации')}} </p>

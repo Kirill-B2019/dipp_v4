@@ -30,7 +30,7 @@
                     </ul>
                 </div>
                 <div class="mobile-social-icon mb-50">
-                    <h6 class="mb-25">{{__('Токены')}}</h6><a class="icon-socials icon-facebook" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></a><a class="icon-socials icon-instagram" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft-tr.png')}}" alt="PF общий"></a><a class="icon-socials icon-twitter" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft.png')}}" alt="PF страхование"></a>
+                    <h6 class="mb-25">{{__('Токены')}}</h6><a class="icon-socials icon-facebook" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></a><a class="icon-socials icon-instagram" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft-tr.png')}}" alt="PF общий"></a><a class="icon-socials icon-twitter" href="#"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/ipft2.png')}}" alt="PF страхование"></a>
                 </div>
                 <div class="site-copyright">Copyright &copy; <?= date('Y'); ?> Права защищены (<a href='https://github.com/Kirill-B2019/'>GIT KB</a>).</div>
             </div>
