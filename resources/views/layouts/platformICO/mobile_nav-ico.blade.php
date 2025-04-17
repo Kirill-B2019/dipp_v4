@@ -19,13 +19,14 @@
                             <li class="has-children"><a href="#tokenomika">{{__('Токеномика')}}</a></li>
                             <li class="has-children"><a href="#roadMap">{{__('Дорожная карта')}}</a></li>
                             <li class="has-children"><a href="#faq">{{__('FAQ')}}</a></li>
+                            <li class="has-children"><a href="#buyPFTG">{{__('Как купить PFTG')}}</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="mobile-account">
                     <h6 class="mb-10">{{__('СИД-РАУНД ПРОДАЖА (Seed Round)')}}</h6>
                     <ul class="mobile-menu font-heading">
-                        <li><a href="#buyPFTG">{{__('Купить PFTG')}}</a></li>
+                        <li><a href="#mobileBuy">{{__('Купить PFTG')}}</a></li>
                     </ul>
                 </div>
                 <div class="mobile-social-icon mb-50">

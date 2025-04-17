@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 mb-40">
+                        <div class="col-lg-8 mb-40" id="mobileBuy">
                             <form id="tokenPurchaseForm" action="{{route('buy_PFTG')}}" method="POST">
                                 @csrf
                                 <div class="box-form-register">
