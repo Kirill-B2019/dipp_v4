@@ -15,18 +15,18 @@
                 <div class="mobile-menu-wrap mobile-header-border">
                     <nav>
                         <ul class="mobile-menu font-heading">
-                            <li class="has-children"><a href="#about">{{__('О платформе')}}</a></li>
-                            <li class="has-children"><a href="#tokenomika">{{__('Токеномика')}}</a></li>
-                            <li class="has-children"><a href="#roadMap">{{__('Дорожная карта')}}</a></li>
-                            <li class="has-children"><a href="#faq">{{__('FAQ')}}</a></li>
-                            <li class="has-children"><a href="#buyPFTG">{{__('Как купить PFTG')}}</a></li>
+                            <li class="has-children"><a href="{{route('platform_ico')}}#about">{{__('О платформе')}}</a></li>
+                            <li class="has-children"><a href="{{route('platform_ico')}}#tokenomika">{{__('Токеномика')}}</a></li>
+                            <li class="has-children"><a href="{{route('platform_ico')}}#roadMap">{{__('Дорожная карта')}}</a></li>
+                            <li class="has-children"><a href="{{route('platform_ico')}}#faq">{{__('FAQ')}}</a></li>
+                            <li class="has-children"><a href="{{route('platform_ico')}}#buyPFTG">{{__('Как купить PFTG')}}</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="mobile-account">
                     <h6 class="mb-10">{{__('СИД-РАУНД ПРОДАЖА (Seed Round)')}}</h6>
                     <ul class="mobile-menu font-heading">
-                        <li><a href="#mobileBuy">{{__('Купить PFTG')}}</a></li>
+                        <li><a href="{{route('platform_ico')}}#mobileBuy">{{__('Купить PFTG')}}</a></li>
                     </ul>
                 </div>
                 <div class="mobile-social-icon mb-50">
