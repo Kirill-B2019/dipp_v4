@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="box-joined">
                         <div class="box-authors">
-                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/iPFT2.png')}}" alt="PF страхование"></span>
+                            <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/iPFT.png')}}" alt="PF страхование"></span>
                             <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft.png')}}" alt="PF общий"></span>
                             <span class="item-author"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF золотой"></span>
                         </div>
@@ -332,7 +332,7 @@
 
                         </div>
                         <div class="card-image">
-                            <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/pft-tr.png')}}" alt="PF"></div>
+                            <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/PFT-tr.png')}}" alt="PF"></div>
                             <div class="card-image-info">
                                 <span class="h3">PFT</span>
                                 <p class="text-md neutral-500">{{__('Основной токен платформы (PFT)')}} </p>
