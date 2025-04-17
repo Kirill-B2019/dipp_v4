@@ -129,7 +129,7 @@
                                 @csrf
                                 <div class="box-form-register">
                                     <h3 class="title-register">{{__('Купить токены PFTG')}}</h3>
-                                    <p class="text-md neutral-700 pb-10">{{__('Привилигированные токены платформы')}}</p>
+                                    <p class="text-md neutral-700 pb-10">{{__('Привилегированные токены платформы')}}</p>
 
 
                                     <!-- Сумма инвестиции-->
