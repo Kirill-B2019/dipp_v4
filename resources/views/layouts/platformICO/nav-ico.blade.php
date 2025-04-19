@@ -11,7 +11,7 @@
                             <li class="has-children"><a href="{{route('platform_ico')}}#tokenomika">{{__('Токеномика')}}</a></li>
                             <li class="has-children"><a href="{{route('platform_ico')}}#roadMap">{{__('Дорожная карта')}}</a></li>
                             <li class="has-children"><a href="{{route('platform_ico')}}#faq">{{__('FAQ')}}</a></li>
-                            <li class="has-children"><a href="{{route('platform_ico')}}#">{{__('WHITEPAPER')}}</a></li>
+                            <li class="has-children"><a href="{{asset('doc/Whitepaper.pdf'}}" target="_blank">{{__('WHITEPAPER')}}</a></li>
 
                         </ul>
                     </nav>
