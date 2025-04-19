@@ -293,6 +293,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 d-none d-md-block" >
+                    <h3 class="mb-25 mt-15 neutral-0">{{__('Архитектура модулей платформы')}}</h3>
                     <div class="image-container">
                         <img src="{{asset('MainPublic/assets/imgs/template/CIPPdrawio.svg')}}" alt="CIPP Diagram" style="width: 100%; height: auto;">
                     </div>
