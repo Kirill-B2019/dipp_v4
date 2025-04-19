@@ -252,6 +252,7 @@
                             <li>{{__('Аналитика и отчетность')}}</li>
                         </ul>
                     </div>
+
                 </div>
                 <div class="col-lg-7 mb-30">
                     <div class="row">
@@ -287,6 +288,13 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 d-none d-md-block" >
+                    <div class="image-container">
+                        <img src="{{asset('doc/CIPPdrawio.svg')}}" alt="CIPP Diagram" style="width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
