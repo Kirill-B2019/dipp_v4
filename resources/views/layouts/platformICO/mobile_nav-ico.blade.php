@@ -20,6 +20,8 @@
                             <li class="has-children"><a href="{{route('platform_ico')}}#roadMap">{{__('Дорожная карта')}}</a></li>
                             <li class="has-children"><a href="{{route('platform_ico')}}#faq">{{__('FAQ')}}</a></li>
                             <li class="has-children"><a href="{{route('platform_ico')}}#buyPFTG">{{__('Как купить PFTG')}}</a></li>
+                            <li class="has-children"><a href="{{asset('doc/Whitepaper.pdf')}}">{{__('WHITE PAPER v.1')}}</a></li>
+
                         </ul>
                     </nav>
                 </div>
