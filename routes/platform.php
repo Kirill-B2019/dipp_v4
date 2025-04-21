@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Orchid\Screens\EmailSenderScreen;
 use App\Orchid\Screens\Examples\ExampleActionsScreen;
 use App\Orchid\Screens\Examples\ExampleCardsScreen;
 use App\Orchid\Screens\Examples\ExampleChartsScreen;
@@ -102,3 +103,5 @@ Route::screen('/examples/charts', ExampleChartsScreen::class)->name('platform.ex
 Route::screen('/examples/cards', ExampleCardsScreen::class)->name('platform.example.cards');
 
 // Route::screen('idea', Idea::class, 'platform.screens.idea');
+
+Route::screen('email',EmailSenderScreen::class)->name('platform.email');
