@@ -9,7 +9,6 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class BuyPlatformTokenController extends Controller
 {
-    //
     public function CreateOrder(ICOBuyPFTGRequest $request): \Illuminate\Http\RedirectResponse
     {
 
@@ -41,71 +40,81 @@ class BuyPlatformTokenController extends Controller
 
 
     }
+   public function ShowOrder($id)
+{
+    $order = BuyPlatformToken::where('order_id', $id)->firstOrFail();
 
-    public function ShowOrder($id)
-    {
+    // Конфигурация кошельков и изображений
+    $paymentMethodsConfig = [
+        'btc' => [
+            'image' => 'bitcoin.webp',
+            'token' => 'bitcoin',
+            'wallet' => 'bc1qymsskzjlkrkpxmqx8388swjqtcw6fng5d3galg',
+            'qr_key' => 'label',
+            'cryptoName' => 'BTC'
+        ],
+        'eth' => [
+            'image' => 'ethereum.webp',
+            'token' => 'ethereum',
+            'wallet' => '0xC2d60259f71adB1d1c1E6E07283b6Ee471dc6aba',
+            'qr_key' => 'message',
+            'cryptoName' => 'ETH'
+        ],
+        'trx' => [
+            'image' => 'tron-logo.webp',
+            'token' => 'tron',
+            'wallet' => 'TK1bBEYr4Y6XmyVZRiqzVYjC5DSyU6GCE5',
+            'qr_key' => 'memo',
+            'cryptoName' => 'TRX'
+        ],
+        'usdt-trc20' => [
+            'image' => 'Tether.webp',
+            'token' => 'tether',
+            'wallet' => 'TK1bBEYr4Y6XmyVZRiqzVYjC5DSyU6GCE5',
+            'qr_key' => 'memo',
+            'cryptoName' => 'USDT (TRC)'
+        ],
+        'usdt-erc20' => [
+            'image' => 'Tether.webp',
+            'token' => 'tether',
+            'wallet' => '0xC2d60259f71adB1d1c1E6E07283b6Ee471dc6aba',
+            'qr_key' => 'message',
+            'cryptoName' => 'USDT (ERC)'
+        ],
+    ];
 
-        $order = BuyPlatformToken::where('order_id', $id)->firstOrFail();
+    // Получение конфигурации для текущего метода оплаты
+    $config = $paymentMethodsConfig[$order->payment_method] ?? null;
 
-
-        switch ($order->payment_method){
-            case 'btc':
-                $cionImg = 'bitcoin.webp';
-                $price = $this->getCryptoPrice('bitcoin');
-                $recive_wallet = 'bc1qymsskzjlkrkpxmqx8388swjqtcw6fng5d3galg';
-                $qrString = "bitcoin:{$recive_wallet}?amount={$order->amount_crypto}&label=" . urlencode($order->order_id);
-                $qr = $this->QRgenerate($qrString);
-                $cryptoName = 'BTC';
-                break;
-            case 'eth':
-                $cionImg = 'ethereum.webp';
-                $price = $this->getCryptoPrice('ethereum');
-                $recive_wallet = '0xC2d60259f71adB1d1c1E6E07283b6Ee471dc6aba';
-                $qrString = "ethereum:{$recive_wallet}?value={$order->amount_crypto}&message=" . urlencode($order->order_id);
-                $qr = $this->QRgenerate($qrString);
-                $cryptoName = 'ETH';
-                break;
-            case 'trx':
-                $cionImg = 'tron-logo.webp';
-                $price = $this->getCryptoPrice('tron');
-                $recive_wallet = 'TK1bBEYr4Y6XmyVZRiqzVYjC5DSyU6GCE5';
-                $qrString = "tron:{$recive_wallet}?amount={$order->amount_crypto}&memo=" . urlencode($order->order_id);
-                $qr = $this->QRgenerate($qrString);
-                $cryptoName = 'TRX';
-                break;
-            case 'usdt-trc20':
-                $cionImg = 'Tether.webp';
-                $price = $this->getCryptoPrice('tether');
-                $recive_wallet = 'TK1bBEYr4Y6XmyVZRiqzVYjC5DSyU6GCE5';
-                $qrString = "tron:{$recive_wallet}?amount={$order->amount_crypto}&memo=" . urlencode($order->order_id);
-                $qr = $this->QRgenerate($qrString);
-                $cryptoName = 'USDT (TRC)';
-                break;
-            case 'usdt-erc20':
-                $cionImg = 'Tether.webp';
-                $price = $this->getCryptoPrice('tether');
-                $recive_wallet = '0xC2d60259f71adB1d1c1E6E07283b6Ee471dc6aba';
-                $qrString = "ethereum:{$recive_wallet}?value={$order->amount_crypto}&message=" . urlencode($order->order_id);
-                $qr = $this->QRgenerate($qrString);
-                $cryptoName = 'USDT (ERC)';
-                break;
-        }
-
-
-
-        return view('platformico.order', compact('order','cionImg','qr','price','recive_wallet','cryptoName'));
+    if (!$config) {
+        Log::error('Неизвестный метод оплаты: ' . $order->payment_method);
+        return redirect()->back()->withErrors(['error' => 'Неизвестный метод оплаты.']);
     }
 
+    $cionImg = $config['image'];
+    $price = $this->getCryptoPrice($config['token']);
+    $recive_wallet = $config['wallet'];
+    $qrString = $this->generateQRString($order, $config);
+    $qr = $this->QRgenerate($qrString);
+    $cryptoName = $config['cryptoName'];
+
+    return view('platformico.order', compact('order', 'cionImg', 'qr', 'price', 'recive_wallet', 'cryptoName'));
+}
+
+protected function generateQRString($order, $config)
+{
+    $qr_key = $config['qr_key'];
+    return "{$config['token']}:{$config['wallet']}?{$qr_key}=" . urlencode($order->amount_crypto) . "&label=" . urlencode($order->order_id);
+}
 
     protected function generateOrderId()
     {
     // Генерация уникального order_id
     do {
-        $orderId = rand(100000, 999999); // Генерация случайного числа в заданном диапазоне
+        $orderId = random_int(100000, 999999); // Генерация случайного числа в заданном диапазоне
         } while (BuyPlatformToken::where('order_id', $orderId)->exists()); // Проверка уникальности
     return $orderId;
     }
-
     //QR и номер кошелька
     public function QRgenerate($string) {
 
@@ -113,15 +122,24 @@ class BuyPlatformTokenController extends Controller
 
 
     }
+    protected $requestCount = 0;
+    protected $maxRequestsPerMonth = 10000; // Примерный лимит
 
-    function getCryptoPrice($token)
+    public function getCryptoPrice($token)
     {
-        $url = 'https://api.coingecko.com/api/v3/simple/price?ids='.$token.'&vs_currencies=usd';
+        $this->requestCount++;
+
+        if ($this->requestCount > $this->maxRequestsPerMonth) {
+            Log::error('Превышен лимит запросов в месяц.');
+            throw new \Exception('Превышен лимит запросов в месяц.');
+        }
+
+        $url = 'https://api.coingecko.com/api/v3/simple/price?ids=' . $token . '&vs_currencies=usd';
         $response = file_get_contents($url);
         $data = json_decode($response, true);
-        return $data[$token]['usd'];
-    }
 
+        return $data[$token]['usd'] ?? null;
+    }
     public function CancelOrder($id)
     {
 
