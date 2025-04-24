@@ -133,3 +133,13 @@
     background-color: #C4FE41;
     transition: width 0.6s ease;
 }
+.my-confirm-button {
+    background-color: #C4FE41; /* Зеленый цвет */
+    color: #191919;
+    border: none; /* Убираем границу */
+}
+
+.my-confirm-button:hover {
+    background-color: #ECEEF2; /* Цвет при наведении */
+    color: #191919;
+}

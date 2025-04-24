@@ -8,18 +8,114 @@ use Illuminate\Support\Facades\Http;
 
 class PlatformICOController extends Controller
 {
+    protected string $excludeKey = 'TWh7BeGu5dxBtYJApWsN7F7SAqeeK4eKyK';
+    protected string $contract = 'TCzvVtyPKaVejCXBjD8SZZuSPi4RK3jb4z';
     public function index()
     {
         $goldPrice = $this->getTodayAuPrice();
-        $contract = 'TCzvVtyPKaVejCXBjD8SZZuSPi4RK3jb4z';
-        $holders = 6;//$this->contractHoldersInfo();
-        $sendSumm = 12443;//$this->contractSendSum();
-        $percent = 2; //intval(ceil(($sendSumm['totalSum']/700000)*100));
+        $holders = $this->contractHoldersInfo();
+        $sendSumm = $this->contractSendSum();
+        $percent = (int)ceil(($sendSumm / 700000) * 100);
         $ExchangeRates = json_encode($this->getExchangeRates());
 
-        return view('platformico.ico', compact('goldPrice','holders','contract','ExchangeRates','sendSumm','percent'));
+        return view('platformico.ico', compact('goldPrice','holders','ExchangeRates','sendSumm','percent'));
     }
 
+
+
+    public function contractHoldersInfo(): int|string
+    {
+        $holdersUrl = "https://api.trongrid.io/v1/contracts/{$this->contract}/tokens?only_confirmed=true";
+        $holdersData = $this->fetchAndDecodeData($holdersUrl);
+
+        if (is_string($holdersData)) {
+            return $holdersData; // Возвращаем сообщение об ошибке
+        }
+
+        if (!isset($holdersData['data']) || !is_array($holdersData['data'])) {
+            return "Некорректные данные от API"; // Обработка некорректных данных
+        }
+
+        $holdersCount = count($holdersData['data']);
+        return $holdersCount - 1;
+    }
+
+    public function contractSendSum()
+    {
+        $totalSum = 0;
+        $totalOwner = 0;
+
+        $sumUrl = "https://api.trongrid.io/v1/contracts/{$this->contract}/tokens?only_confirmed=true";
+        $sumData = $this->fetchAndDecodeData($sumUrl);
+        if (is_string($sumData)) {
+            return ["error" => $sumData]; // Возвращаем сообщение об ошибке
+        }
+
+        if (!isset($sumData['data']) || !is_array($sumData['data'])) {
+            return ["error" => "Некорректные данные от API"]; // Обработка некорректных данных
+        }
+
+        foreach ($sumData['data'] as $item) {
+            foreach ($item as $address => $amount) {
+
+                if ($address !== $this->excludeKey) {
+                    $totalSum += (float)$amount;
+                }
+            }
+        }
+
+        return number_format($totalSum * 0.000001, 0, '.', '');
+    }
+
+
+    /**
+     * Метод для получения и декодирования данных из API
+     *
+     * @param string $url URL для запроса
+     * @return array|string Возвращает массив данных или строку с сообщением об ошибке
+     */
+    protected function fetchAndDecodeData(string $url): array|string
+    {
+        $response = file_get_contents($url);
+        if ($response === false) {
+            return "Ошибка при получении данных";
+        }
+
+        $data = json_decode($response, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            return "Ошибка при декодировании JSON";
+        }
+
+        return $data;
+    }
+
+
+    //Запрос котировок
+    public function getExchangeRates()
+    {
+        $ids = 'bitcoin,ethereum,tether,tron';
+        $response = Http::get("https://api.coingecko.com/api/v3/simple/price?ids={$ids}&vs_currencies=usd");
+
+        // Проверяем, успешен ли запрос
+        if ($response->failed()) {
+            return response()->json(['error' => 'Unable to fetch exchange rates'], 500);
+        }
+
+        $data = $response->json();
+
+        // Проверяем, что все необходимые данные получены
+        $exchangeRates = [
+            'btc' => $data['bitcoin']['usd'] ?? null,
+            'eth' => $data['ethereum']['usd'] ?? null,
+            'usdt-erc20' => $data['tether']['usd'] ?? null,
+            'usdt-trc20' => $data['tether']['usd'] ?? null,
+            'trx' => $data['tron']['usd'] ?? null,
+        ];
+
+        return $exchangeRates;
+    }
+
+    //Запрос на сегодняшнюю ставку золото
     public function getTodayAuPrice()
     {
         $today = Carbon::today();
@@ -68,74 +164,4 @@ class PlatformICOController extends Controller
 
         return number_format($today_rate->rate, 2, '.', ''); // Возвращаем сохраненную ставку с двумя знаками после запятой
     }
-
-
-    public function contractHoldersInfo()
-    {
-
-
-        $holdersUrl = "https://api.trongrid.io/v1/contracts/TCzvVtyPKaVejCXBjD8SZZuSPi4RK3jb4z/tokens?only_confirmed=true";
-        $holdersResponse = file_get_contents($holdersUrl);
-        $holdersData = json_decode($holdersResponse, true);
-        $holdersCount = count($holdersData['data']);
-        return $holdersCount-1;
-
-    }
-
-    //сумма токенов отправленных
-    public function contractSendSum()
-    {
-        // Ключ элемента, который нужно исключить
-        $excludeKey = "TWh7BeGu5dxBtYJApWsN7F7SAqeeK4eKyK"; // замените на нужный ключ
-
-        $totalSum = 0;
-        $totalOnwer =0;
-        $sumUrl = "https://api.trongrid.io/v1/contracts/TCzvVtyPKaVejCXBjD8SZZuSPi4RK3jb4z/tokens?only_confirmed=true";
-        $sumResponse = file_get_contents($sumUrl);
-        $sumData = json_decode($sumResponse, true);
-        foreach ($sumData['data'] as $item) {
-            // Получаем ключ и значение
-            $key = key($item);
-            $value = $item[$key];
-
-            // Проверяем, нужно ли исключить элемент
-            if ($key !== $excludeKey) {
-                $totalSum += (float)$value; // Приводим к числу и добавляем к общей сумме
-            }
-            // Проверяем, нужно ли исключить элемент
-            if ($key == $excludeKey) {
-                $totalOnwer = (float)$value; // Приводим к числу и добавляем к общей сумме
-            }
-        }
-        return [
-            'totalSum'=> number_format($totalSum*0.000001, 0, '.', ''),
-            'totalOnwer'=>number_format($totalOnwer*0.000001, 6, '.', ' '),
-        ];
-    }
-
-    //Запрос котировок
-    public function getExchangeRates()
-    {
-        $ids = 'bitcoin,ethereum,tether,tron';
-        $response = Http::get("https://api.coingecko.com/api/v3/simple/price?ids={$ids}&vs_currencies=usd");
-
-        // Проверяем, успешен ли запрос
-        if ($response->failed()) {
-            return response()->json(['error' => 'Unable to fetch exchange rates'], 500);
-        }
-
-        $data = $response->json();
-
-        // Проверяем, что все необходимые данные получены
-        $exchangeRates = [
-            'btc' => $data['bitcoin']['usd'] ?? null,
-            'eth' => $data['ethereum']['usd'] ?? null,
-            'usdt-erc20' => $data['tether']['usd'] ?? null,
-            'usdt-trc20' => $data['tether']['usd'] ?? null, // Это может потребовать изменения в зависимости от API
-            'trx' => $data['tron']['usd'] ?? null,
-        ];
-
-        return $exchangeRates;
-    }
-
 }

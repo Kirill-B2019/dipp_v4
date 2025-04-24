@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property float $rate
@@ -23,6 +24,7 @@ use Illuminate\Support\Carbon;
  */
 class GoldRate extends Model
 {
+    use SoftDeletes;
     protected $guarded = [];
     protected $table = 'gold_rates';
 

@@ -7,6 +7,7 @@
         </div>
     </div>
 </div>
+@include('sweetalert2::index')
 @include('layouts.platformICO.nav-ico')
 @include('layouts.platformICO.mobile_nav-ico')
 @yield('content')

@@ -9,7 +9,6 @@
             <div class="container">
                 <div class="text-center contact-head">
                     <h2 class="heading-2 neutral-0 mb-20 mt-15">{{__('Покупка токенов PFTG')}}</h2>
-
                 </div>
                 <div class="row">
                    <div class="col-lg-12">
@@ -35,10 +34,9 @@
                                                     <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/coins/'.$cionImg)}}" alt="PF"></div>
                                                     <div class="card-image-info">
                                                         <span id="currentPrice" class="h3">{{$order->amount_crypto}}</span> {{$cryptoName}}
-                                                        <p class="text-sm neutral-500">{{__('Курс 1 = ')}} {{$order->price_crypto}} USD</p>
+                                                        <p class="text-sm neutral-500">{{__('Курс 1 ')}}{{$cryptoName}}{{__(' = ')}}{{$order->price_crypto}} USD</p>
                                                     </div>
                                                 </div>
-
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="card-title">
@@ -48,7 +46,7 @@
                                                 <div class="card-image-left"><img src="{{asset('MainPublic/assets/imgs/page/homepage1/256x256.png')}}" alt="PF"></div>
                                                 <div class="card-image-info">
                                                     <span id="currentPrice" class="h3">{{$order->token_total}}</span> PFTG
-                                                    <p class="text-md neutral-500">{{__('Курс 1 = ')}} {{$order->price}} USD</p>
+                                                    <p class="text-sm neutral-500">{{__('Курс 1 PFTG = ')}}{{$order->price}} USD</p>
                                                 </div>
                                             </div>
                                                 @if($order->token_bonus > 0)

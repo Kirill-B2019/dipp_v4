@@ -4,6 +4,7 @@ use App\Http\Controllers\BuyPlatformTokenController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PlatformICOController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubscribeUserController;
 use Illuminate\Support\Facades\Route;
 
 //Публичные ссылки
@@ -15,6 +16,10 @@ Route::post('/buy-pftg', [BuyPlatformTokenController::class, 'CreateOrder'])->na
 Route::get('/order/{id}', [BuyPlatformTokenController::class, 'ShowOrder'])->name('show_order_PFTG');
 Route::patch('/cancel/{id}', [BuyPlatformTokenController::class, 'CancelOrder'])->name('cancel_order_PFTG');
 Route::patch('/paid/{id}', [BuyPlatformTokenController::class, 'PaidOrder'])->name('paid_order_PFTG');
+
+//подписка на обновления
+Route::post('/subscribe', [SubscribeUserController::class, 'create'])->name('subscribe');
+
 //Служебные маршруты
 
 //Административные маршруты

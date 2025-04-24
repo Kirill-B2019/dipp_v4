@@ -67,8 +67,9 @@
                     <h5 class="text-18-semibold neutral-0">{{__('Подписаться на обновления и новости')}}</h5>
                     <p class="text-sm neutral-600 mb-20">{{__('Никакой рекламы. Никаких обязательств')}}</p>
                     <div class="form-newsletter form-newsletter-2">
-                        <form>
-                            <input class="form-control" type="text" placeholder="email адрес">
+                        <form action="{{route('subscribe')}}" method="post">
+                            @csrf
+                            <input class="form-control" type="text" name="email" placeholder="email адрес">
                             <button class="btn btn-brand-4-medium">{{__('Подписаться')}}
                                 <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M22 11.0003L18.4791 7.47949V10.3074H0V11.6933H18.4791V14.5213L22 11.0003Z" fill=""></path>
